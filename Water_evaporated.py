@@ -1,16 +1,3 @@
-import importlib
-import subprocess
-import sys
-
-# -----------------------------
-# Auto-install missing packages
-# -----------------------------
-required_packages = ["streamlit", "pandas", "matplotlib"]
-for pkg in required_packages:
-    if importlib.util.find_spec(pkg) is None:
-        subprocess.check_call([sys.executable, "-m", "pip", "install", pkg])
-
-
 import streamlit as st
 import json
 import pandas as pd
@@ -186,4 +173,5 @@ st.markdown("""
 }
 ```
 """)
+
 
